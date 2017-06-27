@@ -113,8 +113,8 @@ p.then((adBlockClient) => {
     fileopt: 'overwrite',
   }
   Promise.all([
-    // plot(plotly, domainLisetData, Object.assign(layout, { filename: 'domainInfo.png',  title: 'Domain Info'})),
-    // plot(plotly, filterTypeData, Object.assign(layout, { filename: 'filterTypes.png', title: 'Filter types'}))
+    plot(plotly, domainLisetData, Object.assign(layout, { filename: 'domainInfo.png',  title: 'Domain Info'})),
+    plot(plotly, filterTypeData, Object.assign(layout, { filename: 'filterTypes.png', title: 'Filter types'}))
   ])
 }).catch((e) => {
   console.error(e)
