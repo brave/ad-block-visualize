@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "ad-block": "^3.0.3",
+    "plotly": "^1.0.6",
+    "request": "^2.81.0"
+  }
+}
