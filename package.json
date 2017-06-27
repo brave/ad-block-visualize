@@ -1,10 +1,14 @@
 {
   "dependencies": {
-    "ad-block": "^3.0.3",
+    "ad-block": "brave/ad-block#easy-privacy",
     "plotly": "^1.0.6",
     "request": "^2.81.0"
   },
   "scripts": {
+    "lint": "standard",
     "start": "node index.js"
+  },
+  "devDependencies": {
+    "standard": "^10.0.2"
   }
 }

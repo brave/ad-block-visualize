@@ -15,7 +15,6 @@ const byTypeDomainListInfo = filterTypes.reduce((result, filterType) => {
   return result
 }, {})
 
-
 const testLists = [
   './test/data/easylist.txt',
   'test/data/easyprivacy.txt',
@@ -56,7 +55,7 @@ p.then((adBlockClient) => {
   const domainLisetData = [{
     name: 'All',
     textposition: 'inside',
-    hole: .4,
+    hole: 0.4,
     labels: Object.keys(domainListInfo),
     values: Object.values(domainListInfo),
     type: 'pie',
@@ -67,7 +66,7 @@ p.then((adBlockClient) => {
   }, {
     name: 'No NP',
     textposition: 'inside',
-    hole: .4,
+    hole: 0.4,
     labels: Object.keys(byTypeDomainListInfo['noFingerprintFilters']),
     values: Object.values(byTypeDomainListInfo['noFingerprintFilters']),
     type: 'pie',
@@ -78,7 +77,7 @@ p.then((adBlockClient) => {
   }, {
     name: 'No FP Excep.',
     textposition: 'inside',
-    hole: .4,
+    hole: 0.4,
     labels: Object.keys(byTypeDomainListInfo['noFingerprintExceptionFilters']),
     values: Object.values(byTypeDomainListInfo['noFingerprintExceptionFilters']),
     type: 'pie',
@@ -89,7 +88,7 @@ p.then((adBlockClient) => {
   }, {
     name: 'Filters',
     textposition: 'inside',
-    hole: .4,
+    hole: 0.4,
     labels: Object.keys(byTypeDomainListInfo['filters']),
     values: Object.values(byTypeDomainListInfo['filters']),
     type: 'pie',
@@ -100,7 +99,7 @@ p.then((adBlockClient) => {
   }, {
     name: 'Excep. Filters',
     textposition: 'inside',
-    hole: .4,
+    hole: 0.4,
     labels: Object.keys(byTypeDomainListInfo['exceptionFilters']),
     values: Object.values(byTypeDomainListInfo['exceptionFilters']),
     type: 'pie',
@@ -110,11 +109,11 @@ p.then((adBlockClient) => {
     }
   }]
   const layout = {
-    fileopt: 'overwrite',
+    fileopt: 'overwrite'
   }
   Promise.all([
-    plot(plotly, domainLisetData, Object.assign(layout, { filename: 'domainInfo.png',  title: 'Domain Info'})),
-    plot(plotly, filterTypeData, Object.assign(layout, { filename: 'filterTypes.png', title: 'Filter types'}))
+    plot(plotly, domainLisetData, Object.assign(layout, { filename: 'domainInfo.png', title: 'Domain Info' })),
+    plot(plotly, filterTypeData, Object.assign(layout, { filename: 'filterTypes.png', title: 'Filter types' }))
   ])
 }).catch((e) => {
   console.error(e)
