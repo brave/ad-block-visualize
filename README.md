@@ -20,4 +20,9 @@ Add the following content at this location: `~/.plotly/.credentials`
 }
 ```
 
-Run `npm start` and you will see output for the URL to use to view the generated charts.
+```
+yarn install
+yarn start
+```
+
+You will see output for the URL to use to view the generated charts.
