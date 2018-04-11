@@ -64,7 +64,7 @@ p.then((adBlockClient) => {
       x: [0, 1]
     }
   }, {
-    name: 'No NP',
+    name: 'No FP',
     textposition: 'inside',
     hole: 0.4,
     labels: Object.keys(byTypeDomainListInfo['noFingerprintFilters']),
